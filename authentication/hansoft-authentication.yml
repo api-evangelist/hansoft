@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+docs: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+notes: >-
+  P4 Plan (Hansoft) is not an OpenAPI/OAuth provider. The GraphQL API service
+  authenticates with a login mutation that establishes a session against a
+  customer-hosted P4 Plan server; the native SDK authenticates with a session
+  connection (server address, database, user credentials / SDK primary key).
+  There is no OAuth2 authorization server and no OAuth scope surface, so
+  scopes/ is intentionally skipped.
+summary:
+  types:
+  - session
+  mechanisms:
+  - graphql-login-mutation
+  - sdk-session
+  oauth2_flows: []
+schemes:
+- name: graphqlLogin
+  type: session
+  transport: graphql
+  detail: >-
+    Clients call the `login` mutation to obtain a session before invoking other
+    queries, mutations, or subscriptions. Sessions are scoped to the
+    customer-hosted server and enforce P4 Plan's per-project, field-level
+    permission model.
+  sources:
+  - https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+- name: sdkSession
+  type: session
+  transport: sdk
+  detail: >-
+    The native SDK opens a session to the P4 Plan server using the server
+    address, database name, and user credentials (with an SDK primary key /
+    working directory). All SDK operations run in the context of that session.
+  sources:
+  - https://help.perforce.com/hansoft/sdk/index.html
