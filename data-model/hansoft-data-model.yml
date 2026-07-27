@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+notes: >-
+  Entity graph for P4 Plan (Hansoft), derived from the documented GraphQL query
+  and mutation surface (no OpenAPI $ref graph exists for a GraphQL API). Captures
+  the primary entities and their relationships as documented.
+entities:
+- name: Project
+  operations: [project, projects, projectSettings, createProject, updateProject, cloneProject]
+  description: Top-level container for backlogs, sprints, items, reports, and settings.
+- name: Item
+  operations: [item, items, itemsByIDs, itemsFromReport, createBacklogTasks, createBugs, createSprintTasks]
+  description: Work item (backlog task, bug, or sprint task) belonging to a project.
+- name: User
+  operations: [authenticatedUser, user, users, createNormalUser, updateNormalUser, deleteUser]
+  description: A P4 Plan user account.
+- name: UserGroup
+  operations: [userGroups]
+  description: Group of users used for permissioning and assignment.
+- name: Sprint
+  operations: [sprintItems, sprintPointsHistory, sprintEstimatedDaysHistory]
+  description: Time-boxed iteration containing sprint items.
+- name: Timesheet
+  operations: [myTimesheetDay, myTimesheetDateRange, timesheetReport]
+  description: Time tracking records per user and date range.
+- name: Report
+  operations: [report, reports, charts, dashboardPages]
+  description: Saved reports, charts, and dashboard pages over project data.
+- name: CustomField
+  operations: [customFields, columns, activeColumns]
+  description: Custom fields/columns extending items and projects.
+- name: Webhook
+  operations: []
+  description: Admin-configured outbound webhook bound to a project and event set.
+relationships:
+- from: Item
+  to: Project
+  kind: belongs_to
+  via: projectID
+- from: Sprint
+  to: Project
+  kind: belongs_to
+  via: projectID
+- from: Report
+  to: Project
+  kind: belongs_to
+  via: projectID
+- from: Webhook
+  to: Project
+  kind: belongs_to
+  via: projectIDs
+- from: Project
+  to: Item
+  kind: has_many
+  via: items
+- from: Sprint
+  to: Item
+  kind: has_many
+  via: sprintItems
+- from: UserGroup
+  to: User
+  kind: has_many
+  via: users
+- from: Timesheet
+  to: User
+  kind: belongs_to
+  via: user
+- from: Item
+  to: CustomField
+  kind: has_many
+  via: customFields

@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html +
+  product docs
+standards:
+- id: graphql
+  conforms: true
+  evidence: P4 Plan API service is a GraphQL API (queries, mutations, subscriptions)
+- id: webhooks
+  conforms: true
+  evidence: admin-configured outbound webhooks deliver item update events (e.g. Jira)
+- id: websocket
+  conforms: true
+  evidence: Web API exposes data/tasks over DDP protocol via WebSocket
+- id: oauth2
+  conforms: false
+- id: openid-connect
+  conforms: false
+- id: rest
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: GraphQL errors[] envelope, not application/problem+json
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    Perforce publishes SOC 2 Type 2 attestation via its Trust Center /
+    security-compliance policies (see security/hansoft-trust-center.yml)
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    Perforce ISMS / ISO 27001 certificates published per business unit via the
+    Trust Center (see security/hansoft-trust-center.yml)

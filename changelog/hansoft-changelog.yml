@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm
+scheme: calver
+current: '2026.1'
+docs: https://help.perforce.com/hansoft/current/Content/whats-new/
+entries:
+- version: '2026.1'
+  date: '2026-02'
+  breaking: false
+  highlights:
+  - >-
+    New webhooks feature: integrate P4 Plan with external services (e.g. Jira);
+    configured by administrators in the web client, triggered from web and
+    desktop clients.
+  - Dashboard search: locate dashboard pages and charts; admins can view/restore dashboards from deleted user accounts.
+  - Product backlog priority column now available (read-only) in Planning view and To Do List.
+  - Continued rebrand from Helix Plan to P4 Plan with UI updates.

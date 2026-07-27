@@ -1,7 +1,30 @@
 aid: hansoft
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hansoft.png
 name: Hansoft
-description: 'Hansoft is a company surfaced as a portfolio company of creandum and added to the API Evangelist
-  network as a stub for enrichment. Sector: other. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Hansoft, now branded P4 Plan by Perforce, is a real-time agile project
+  planning and portfolio management tool for software, game, and hardware teams.
+  It lets multiple teams work in their preferred methodology simultaneously
+  (Scrum, Kanban, and Gantt) within a single backlog, with field-level
+  permissions, capacity and resource planning, sprint and burndown reporting,
+  and tight integration with Perforce version control (P4 changelists). For
+  developers it exposes a GraphQL API service (queries, mutations, and
+  subscriptions), a native SDK with C, C++, Java, and .NET wrappers, a WebSocket
+  Web API, and outbound webhooks for integrations such as Jira. Hansoft is
+  deployed on-premises for security-conscious organizations, so its API and SDK
+  run against a customer-hosted P4 Plan server.
 url: https://raw.githubusercontent.com/api-evangelist/hansoft/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +34,112 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Other
-apis: []
+- Project Management
+- Agile
+- Planning
+- Software Development
+- GraphQL
+- SDK
+- Webhooks
+- DevOps
+apis:
+- name: P4 Plan (Hansoft) GraphQL API
+  description: >-
+    GraphQL API service for P4 Plan (Hansoft) exposing 60+ queries, 100+
+    mutations, and 50+ subscriptions across projects, items (tasks, bugs,
+    backlog), users and groups, sprints, timesheets, reports, dashboards,
+    custom fields, and webhooks. Authenticates via a login mutation. Runs as a
+    service against a customer-hosted P4 Plan server.
+  humanURL: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+  tags:
+  - GraphQL
+  - Project Management
+  properties:
+  - type: APIReference
+    url: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+  - type: GraphQL
+    url: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+- name: P4 Plan (Hansoft) SDK
+  description: >-
+    Native P4 Plan (Hansoft) SDK with C, C++, Java, and .NET wrappers
+    auto-generated from C headers. Provides session management, resource and
+    project operations, workflow configuration, custom columns/fields, and
+    dashboard/reporting access against a customer-hosted server.
+  humanURL: https://help.perforce.com/hansoft/sdk/index.html
+  tags:
+  - SDK
+- name: P4 Plan (Hansoft) Web API
+  description: >-
+    Web service exposing a limited set of data and tasks over the DDP protocol
+    via a WebSocket connection.
+  humanURL: https://help.perforce.com/hansoft/10.2/api/index.html
+  tags:
+  - WebSocket
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/hansoft-domain-security.yml
+- type: Website
+  url: https://www.perforce.com/products/hansoft
+- type: DeveloperPortal
+  url: https://help.perforce.com/hansoft/
+- type: Documentation
+  url: https://help.perforce.com/hansoft/
+- type: APIReference
+  url: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+- type: GettingStarted
+  url: https://help.perforce.com/p4-plan/current/Content/hansoftapi/installing-hansoft-api-service.htm
+- type: Support
+  url: https://www.perforce.com/contact-us
+- type: Blog
+  url: https://www.perforce.com/blog
+- type: SignUp
+  url: https://www.perforce.com/products/hansoft/free-agile-planning-tool
+- type: TermsOfService
+  url: https://www.perforce.com/terms-use
+- type: PrivacyPolicy
+  url: https://www.perforce.com/privacy-policy
+- type: StatusPage
+  url: https://status.perforce.com/
+- type: TrustCenter
+  url: https://trust.perforce.com/
+- type: Compliance
+  url: https://www.perforce.com/company/security-compliance-policies
+- type: ChangeLog
+  url: https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm
+- type: ChangeLog
+  url: changelog/hansoft-changelog.yml
+- type: Webhooks
+  url: asyncapi/hansoft-webhooks.yml
+- type: Authentication
+  url: authentication/hansoft-authentication.yml
+- type: Conventions
+  url: conventions/hansoft-conventions.yml
+- type: Conformance
+  url: conformance/hansoft-conformance.yml
+- type: DataModel
+  url: data-model/hansoft-data-model.yml
+- type: Packages
+  url: packages/hansoft-packages.yml
+- type: SDKs
+  url: packages/hansoft-packages.yml
+- type: LLMsTxt
+  url: llms/hansoft-llms.txt
+- type: WellKnown
+  url: well-known/hansoft-well-known.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Lifecycle
+  url: lifecycle/hansoft-lifecycle.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

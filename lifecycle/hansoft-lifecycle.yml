@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm +
+  https://status.perforce.com/
+versioning:
+  scheme: calver
+  current: '2026.1'
+  api_version: '2026.22001'
+  docs: https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm
+  detail: >-
+    P4 Plan (Hansoft) follows a CalVer product release cadence (YEAR.N, e.g.
+    2026.1). The GraphQL API version tracks the product build.
+release_notes:
+  url: https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm
+status_page: https://status.perforce.com/
+deprecation:
+  policy_url: null
+  sunset_header: null
+  detail: No dedicated public API deprecation policy or Sunset/Deprecation header support found.
+sla:
+  url: null
+  detail: Deployed on-premises; SLA governed by the customer's own hosting.

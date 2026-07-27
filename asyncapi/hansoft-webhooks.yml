@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://help.perforce.com/hansoft/current/Content/web/jira-webhooks.htm +
+  https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+spec_type: Webhooks
+notes: >-
+  P4 Plan (Hansoft) documents outbound webhooks but publishes no AsyncAPI
+  document. Webhooks were introduced in 2026.1. They are created and managed by
+  administrator users in the web client and can be used by all users; they fire
+  for updates made in the desktop client too. The GraphQL API exposes webhook
+  queries returning id, name, url, events, enabled, projectIDs, and type.
+webhooks:
+  management:
+    configured_by: administrator (web client)
+    used_by: all users
+  fields:
+  - id
+  - name
+  - url
+  - events
+  - enabled
+  - projectIDs
+  - type
+  events:
+  - id: item.updated
+    description: >-
+      When a linked item is updated the webhook sends the change to the
+      connected external work item (e.g. a Jira work item, where it appears as a
+      comment).
+  integrations:
+  - name: Jira
+    docs: https://help.perforce.com/hansoft/current/Content/web/jira-webhooks.htm
+    description: Link P4 Plan items to Jira work items and share updates via webhook.

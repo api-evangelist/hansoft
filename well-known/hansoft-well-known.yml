@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: probed
+source: live probe of perforce.com + help.perforce.com hosts
+notes: >-
+  P4 Plan (Hansoft) is deployed on-premises against a customer-hosted server, so
+  there is no vendor-hosted API host to probe for .well-known discovery. The
+  Perforce corporate + documentation hosts were probed; none publish a
+  .well-known discovery surface. Absence is valid, expected data.
+hosts:
+- host: https://www.perforce.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://help.perforce.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

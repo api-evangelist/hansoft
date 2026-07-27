@@ -1,0 +1,14 @@
+generated: '2026-07-19'
+method: generated
+source: >-
+  grounded in real GraphQL operations from
+  https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+skills:
+- file: hansoft-create-backlog-item.md
+  name: Create and track a backlog item in P4 Plan
+  api: P4 Plan (Hansoft) GraphQL API
+  operations: [login, projects, createBacklogTasks, createBugs, createSprintTasks, items, itemsByIDs]
+- file: hansoft-manage-users-and-projects.md
+  name: Manage users and projects in P4 Plan
+  api: P4 Plan (Hansoft) GraphQL API
+  operations: [login, users, userGroups, createNormalUser, updateNormalUser, deleteUser, projects, createProject, updateProject, cloneProject]

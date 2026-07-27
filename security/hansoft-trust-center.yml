@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://trust.perforce.com/ +
+  https://www.perforce.com/company/security-compliance-policies
+probe: false
+url: https://trust.perforce.com/
+compliance_url: https://www.perforce.com/company/security-compliance-policies
+notes: >-
+  Perforce (parent of P4 Plan / Hansoft) operates a SafeBase-powered Trust
+  Center at trust.perforce.com and publishes a security & compliance policies
+  page. The Trust Center is a JavaScript app so the automated probe returned no
+  hit; certifications below were confirmed via the public security-compliance
+  page and Trust Center. P4 Plan itself is typically deployed on-premises, so
+  much compliance posture covers Perforce cloud services and corporate ISMS.
+certifications:
+- SOC 2 Type 2
+- ISO 27001
+- ISO 42001
+data_protection:
+- TLS 1.2+ for data in transit
+- encryption at rest for customer data stores
+- GDPR
+evidence:
+- source: https://trust.perforce.com/
+  kind: trust-center
+- source: https://www.perforce.com/company/security-compliance-policies
+  kind: compliance-policy

@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html
+notes: >-
+  Cross-cutting semantics for the P4 Plan (Hansoft) GraphQL API. Derived from the
+  published GraphQL API documentation and product docs. No documented
+  idempotency-key mechanism was found, so no Idempotency pointer is emitted.
+authentication:
+  style: session
+  detail: login mutation establishes a session; see authentication/hansoft-authentication.yml
+transport:
+  protocol: graphql
+  operations:
+    queries: '60+'
+    mutations: '100+'
+    subscriptions: '50+'
+  subscriptions_detail: >-
+    Real-time updates are delivered over GraphQL subscriptions for item, user,
+    and project change events.
+idempotency:
+  supported: false
+  detail: >-
+    No documented idempotency-key header or parameter. Mutations are
+    single-shot; retries are the caller's responsibility.
+pagination:
+  style: graphql
+  detail: >-
+    Collection queries (items, projects, users, reports) return lists;
+    id-targeted queries (item, itemsByIDs, itemsFromReport) fetch precise
+    records. Cursor/offset parameters are governed by the GraphQL schema.
+versioning:
+  scheme: calver
+  detail: >-
+    API version tracks the product CalVer release (e.g. 2026.1 / API version
+    2026.22001). See lifecycle/hansoft-lifecycle.yml.
+error_envelope:
+  style: graphql-errors
+  detail: >-
+    Errors are returned in the standard GraphQL top-level `errors[]` array
+    (message + locations + path), not RFC 9457 problem+json.
+events:
+  webhooks: true
+  detail: >-
+    Outbound webhooks (admin-configured in the web client) deliver item update
+    events to external services such as Jira. See asyncapi/hansoft-webhooks.yml.
+permissions:
+  model: field-level
+  detail: >-
+    P4 Plan enforces per-project and field-level permissions; API responses are
+    scoped to what the authenticated user may see.
+cross_links:
+  authentication: authentication/hansoft-authentication.yml
+  lifecycle: lifecycle/hansoft-lifecycle.yml
+  webhooks: asyncapi/hansoft-webhooks.yml
+  data_model: data-model/hansoft-data-model.yml

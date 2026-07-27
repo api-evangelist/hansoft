@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  https://help.perforce.com/hansoft/sdk/index.html and the Perforce customer
+  download portal (SDK/API downloads)
+notes: >-
+  The P4 Plan (Hansoft) SDK ships as native wrappers (C, C++, Java, .NET)
+  auto-generated from the C headers and is distributed via the Perforce customer
+  download portal rather than public package registries (npm, PyPI, Maven
+  Central, NuGet). No first-party client library was found on a public registry.
+  Entries below are the first-party SDK distributions; official: true because
+  Perforce publishes them.
+packages:
+- language: c
+  registry: perforce-portal
+  name: P4 Plan (Hansoft) SDK - C
+  url: https://www.perforce.com/downloads/hansoft-sdk
+  official: true
+- language: cpp
+  registry: perforce-portal
+  name: P4 Plan (Hansoft) SDK - C++
+  url: https://www.perforce.com/downloads/hansoft-sdk
+  official: true
+- language: java
+  registry: perforce-portal
+  name: P4 Plan (Hansoft) SDK - Java wrapper
+  url: https://www.perforce.com/downloads/hansoft-sdk
+  official: true
+- language: dotnet
+  registry: perforce-portal
+  name: P4 Plan (Hansoft) SDK - .NET wrapper
+  url: https://www.perforce.com/downloads/hansoft-sdk
+  official: true

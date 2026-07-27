@@ -1,0 +1,29 @@
+# Hansoft (P4 Plan)
+
+> Hansoft, now branded P4 Plan by Perforce, is a real-time agile project planning and portfolio management tool for software, game, and hardware teams. Multiple teams work in Scrum, Kanban, or Gantt simultaneously within one backlog. For developers it exposes a GraphQL API service, a native SDK (C, C++, Java, .NET), a WebSocket Web API, and outbound webhooks. Deployed on-premises against a customer-hosted server.
+
+## APIs
+
+- [P4 Plan GraphQL API](https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html): 60+ queries, 100+ mutations, 50+ subscriptions; login mutation for auth.
+- [P4 Plan SDK](https://help.perforce.com/hansoft/sdk/index.html): native C/C++/Java/.NET wrappers.
+- [P4 Plan Web API](https://help.perforce.com/hansoft/10.2/api/index.html): DDP protocol over WebSocket.
+
+## Docs
+
+- [P4 Plan Documentation](https://help.perforce.com/hansoft/)
+- [Getting Started — install the API service](https://help.perforce.com/p4-plan/current/Content/hansoftapi/installing-hansoft-api-service.htm)
+- [What's new (changelog)](https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm)
+- [Jira webhooks](https://help.perforce.com/hansoft/current/Content/web/jira-webhooks.htm)
+
+## Product
+
+- [Product page](https://www.perforce.com/products/hansoft)
+- [Free agile planning tool (up to 5 users)](https://www.perforce.com/products/hansoft/free-agile-planning-tool)
+- [Blog](https://www.perforce.com/blog)
+- [Support / contact](https://www.perforce.com/contact-us)
+
+## Trust
+
+- [Trust Center](https://trust.perforce.com/)
+- [Security & compliance policies](https://www.perforce.com/company/security-compliance-policies)
+- [Status page](https://status.perforce.com/)
