@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Hansoft is a company surfaced as a portfolio company of creandum and added to the API Evangelist network as a stub for enrichment. Sector: other. This profile is a lead awaiting the enrichment pipeline.
+Hansoft, now branded P4 Plan by Perforce, is a real-time agile project planning and portfolio management tool for software, game, and hardware teams. It lets multiple teams work in their preferred methodology simultaneously (Scrum, Kanban, and Gantt) within a single backlog, with field-level permissions, capacity and resource planning, sprint and burndown reporting, and tight integration with Perforce version control (P4 changelists). For developers it exposes a GraphQL API service (queries, mutations, and subscriptions), a native SDK with C, C++, Java, and .NET wrappers, a WebSocket Web API, and outbound webhooks for integrations such as Jira. Hansoft is deployed on-premises for security-conscious organizations, so its API and SDK run against a customer-hosted P4 Plan server.
 
-Backed by: creandum
+**Areas:** Company · Project Management · Agile · Planning · Software Development · GraphQL · SDK · Webhook · DevOps
+
+## Hansoft on APIs.io
+
+Everything profiled for Hansoft is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hansoft/](https://apis.io/providers/hansoft/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [P4 Plan (Hansoft) GraphQL API](https://apis.io/apis/hansoft/p4-plan-hansoft-graphql-api/) — GraphQL API service for P4 Plan (Hansoft) exposing 60+ queries, 100+ mutations, and 50+ subscriptions across projects, items (tasks, bugs, backlog), users…
+- [P4 Plan (Hansoft) SDK](https://apis.io/apis/hansoft/p4-plan-hansoft-sdk/) — Native P4 Plan (Hansoft) SDK with C, C++, Java, and .NET wrappers auto-generated from C headers. Provides session management, resource and project…
+- [P4 Plan (Hansoft) Web API](https://apis.io/apis/hansoft/p4-plan-hansoft-web-api/) — Web service exposing a limited set of data and tasks over the DDP protocol via a WebSocket connection.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Hansoft Webhooks](https://apis.io/asyncapis/hansoft/hansoft-webhooks/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hansoft Authentication](https://apis.io/security/hansoft/hansoft-authentication/)
+- [Hansoft Domain Security](https://apis.io/security/hansoft/hansoft-domain-security/)
+- [Hansoft Trust Center](https://apis.io/security/hansoft/hansoft-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.perforce.com/products/hansoft)
+- [Documentation](https://help.perforce.com/hansoft/)
+- [Getting started](https://help.perforce.com/p4-plan/current/Content/hansoftapi/installing-hansoft-api-service.htm)
+- [API reference](https://help.perforce.com/hansoft/current/Content/hansoftapi/index.html)
+- [Sign up](https://www.perforce.com/products/hansoft/free-agile-planning-tool)
+- [Support](https://www.perforce.com/contact-us)
+- [Changelog](https://help.perforce.com/hansoft/current/Content/whats-new/2026_1.htm)
+- [Blog](https://www.perforce.com/blog)
+- [Compliance](https://www.perforce.com/company/security-compliance-policies)
+- [Trust centre](https://trust.perforce.com/)
+- [Terms of service](https://www.perforce.com/terms-use)
+- [Privacy policy](https://www.perforce.com/privacy-policy)
+- [Status](https://status.perforce.com/)
+
+## API Evangelist rating
+
+**Kin Score 47.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 50.0 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hansoft/](https://apis.io/providers/hansoft/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hansoft: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hansoft/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
